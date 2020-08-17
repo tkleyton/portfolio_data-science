@@ -176,6 +176,17 @@ Assim, com esses dados, os jogadores poderiam extrair informações que auxiliam
 Por exemplo, [neste notebook](https://github.com/tkleyton/mtgo_data_scraper/blob/master/mtgo_data_analysis.ipynb), verifiquei que a estratégia que eu utilizava tinha uma grande taxa de vitória entre os turnos 5-7, porém altas taxas de derrota fora desta faixa.
 
 ---
+
+# Codewars
+
+[O codewars](https://www.codewars.com/) é uma plataforma contendo diversos desafios de programação, sendo uma ótima ferramenta para estudar linguagens com a mão na massa.
+
+Uma vez que você resolve um desafio, é possível ver e discutir as soluções enviadas pelos outros usuários. Assim, posso descobrir maneiras diferentes e mais eficientes de se resolver aquele tipo de problema.
+
+Para não ir contra a ideia da plataforma, não é possível visualizar minhas soluções. Mas é possível ver os desafios que pratiquei aqui: <https://www.codewars.com/users/tkleyton/completed>
+
+Até o momento, venho praticando Python, SQL e Julia.
+
 ---
 
 # Contato
