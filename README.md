@@ -25,7 +25,7 @@ Todos os projetos estão abertos para sugestões.
 
 Conforme eu for estudando novas tecnologias, tentarei ir adicionando alguns notebooks ilustrando alguns exemplos de uso para consolidar os conceitos.
 
-## PySpark
+## [PySpark](example_notebooks/spark_mongo.ipynb)
 
 Para trabalhar com documentos maiores, senti necessidade de adicionar alguma ferramenta de Big Data ao meu repertório. Assim, pela familiaridade com Pandas, escolhi me familiarizar com o PySpark.
 
@@ -33,6 +33,18 @@ No notebook [example_notebooks/spark_mongo.ipynb](example_notebooks/spark_mongo.
 Também demonstro um pouco da sintaxe para queries e algumas visualizações com Plotly.
 
 Como o notebook contém gráficos interativos, [visualize a versão renderizada aqui.](https://nbviewer.jupyter.org/github/tkleyton/portfolio_data-science/blob/master/example_notebooks/spark_mongo.ipynb)
+
+
+## [Web-scraping e Wordcloud](example_notebooks/mtgo_wordcloud.ipynb)
+
+Um dos meus hobbies é o jogo de cartas [*Magic: The Gathering* (MtG)](https://magic.wizards.com/).  
+Considerado um dos mais renomados jogos de seu gênero, vários torneios oficiais ocorrem durante o ano todo no mundo inteiro. Somente em Pro Tours [(considerado o segundo maior evento competitivo de MtG)](https://en.wikipedia.org/wiki/Magic:_The_Gathering_Pro_Tour), são oferecidos aproximadamente 1 milhão de dolares em premiações divididos em 4 eventos por ano.  
+
+Paralelamente, existem plataformas virtuais onde os jogadores podem participar de torneios. Os jogadores com um ótimo desempenho nos torneios têm seus baralhos publicados periodicamente. Como a variedade de cartas é enorme (> 20000), grande parte dos jogadores acessam essas publicações para ver quais estratégias tem uma melhor taxa de sucesso.  
+Como o jogo está em constante evolução com mais cartas únicas sendo adicionadas ao jogo periodicamente, as estratégias mais viáveis estão em constante mudança.  
+Nesse sentido, achei interessante criar um meio de fácil visualização das cartas mais utilizadas em torneios específicos.
+
+No notebook, utilizo `requests` e `BeautifulSoup` para extrair as cartas nas listas publicadas e gero a visualização com `wordcloud`.
 
 
 # AceleraDev - Data Science
@@ -101,33 +113,34 @@ Utilizei `requests` e `BeautifulSoup` para extrair informações sobre as estrat
 
 Desta forma, sabendo mais sobre as estratégias que estão sendo mais utilizadas atualmente, posso tomar melhores decisões sobre que estratégia utilizar para ter melhores chances de vitória em eventuais torneios.
 
-## Public Google Spreadsheet
+## [Public Google Spreadsheet](https://github.com/tkleyton/pubhtml_scraper)
 
 Um conhecido precisava baixar um documento público em formato CSV.  
 O documento em questão é uma [tabela CID-10](https://docs.google.com/spreadsheets/d/e/2PACX-1vQG13ojbnTnmoF_UF69QVA5OjOOjB57m-xam6Ac1RhsMkOnsLPCn57xcVqsZ33ZFdP17gD38z7M_m5o/pubhtml#) que contém dados relacionados à saúde.  
 Para gerar o arquivo csv, costuma-se bastar adicionar `pub?output=csv` ao final da URL. Porém, neste caso, a tabela contém diversas abas.
 
-[Neste Jupyter nootebook](https://github.com/tkleyton/pubhtml_scraper), mostro como utilizei `requests`, `BeautifulSoup` e REGEX para extrair os IDs das abas para baixá-las individualmente como CSV.
+Neste Jupyter nootebook, mostro como utilizei `requests`, `BeautifulSoup` e REGEX para extrair os IDs das abas para baixá-las individualmente como CSV.
 
-## Discursos proferidos na câmara dos deputados
+## [Discursos proferidos na câmara dos deputados](https://github.com/tkleyton/camara-scraper)
 
 Inicialmente, escrevi um script utilizando os pacotes `requests` e `BeautifulSoup` para extrair as informações e coloquei em um loop para navegar pelas páginas.  
 Os dados extraídos foram sendo adicionados a um `pandas DataFrame`.    
-O código pode ser [visto aqui.](https://github.com/tkleyton/camara-scraper)
 
-Mas eu ainda não estava satisfeito com o desempenho do script.  
+Mas eu ainda não estava satisfeito com o desempenho do script.
+
+## [Discursos proferidos na câmara dos deputados - Parte 2](https://github.com/tkleyton/scrapy-discursos)
+
 Eu gostaria de ter algo mais automatizado para ir para as próximas páginas e que não precisasse esperar as requisições de cada entrada para ir para a seguinte, já que para cada discurso eu precisaria acessar uma nova página para extrair as informações relevantes (se ficou confuso, é mais fácil [olhar o site](https://www.camara.leg.br/internet/sitaqweb/resultadoPesquisaDiscursos.asp?txOrador=&txPartido=&txUF=&dtInicio=01%2F01%2F2020&dtFim=16%2F08%2F2020&txTexto=&txSumario=&basePesq=plenario&CampoOrdenacao=dtSessao&PageSize=50&TipoOrdenacao=DESC&btnPesq=Pesquisar)).
 
 Pensei em começar a estudar mais sobre paralelização para disparar várias requisições ao mesmo tempo, mas como um bom preguiçoso fui procurar soluções na [bola de cristal.](https://www.google.com/)
 
 Depois de ler um pouco mais sobre ferramentas de web-scraping, me deparei com o [Scrapy](https://scrapy.org/) e refiz o script que ficou bem mais simples (de escrever), rápido e escalável.  
-O código pode ser [visto aqui.](https://github.com/tkleyton/scrapy-discursos)
 
-### Mais Scrapy
+### [Scraping Scrabble Words](https://github.com/tkleyton/scrabble-words)
 
 Para ajudar a consolidar o que estudei sobre `Scrapy`, desenvolvi mais um projeto simples para extrair palavras válidas no jogo de tabuleiro [Scrabble](http://www.allscrabblewords.com/).
 
-[Neste scrapper](https://github.com/tkleyton/scrabble-words), utilizei a funcionalidade dos pipelines para salvar as palavras com *n* letras em *n* diferentes worksheets em um arquivo `.xls`.
+Neste scrapper, utilizei a funcionalidade dos pipelines para salvar as palavras com *n* letras em *n* diferentes worksheets em um arquivo `.xls`.
 
 ---
 
