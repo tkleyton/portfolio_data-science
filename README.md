@@ -29,7 +29,7 @@ Conforme eu for estudando novas tecnologias, tentarei ir adicionando alguns note
 
 Para trabalhar com documentos maiores, senti necessidade de adicionar alguma ferramenta de Big Data ao meu repertório. Assim, pela familiaridade com Pandas, escolhi me familiarizar com o PySpark.
 
-No notebook <example_notebooks/spark_mongo.ipynb> demonstro como conectar o PySpark com o MongoDB para ler e escrever nos clusters.  
+No notebook [example_notebooks/spark_mongo.ipynb](example_notebooks/spark_mongo.ipynb) demonstro como conectar o PySpark com o MongoDB para ler e escrever nos clusters.  
 Também demonstro um pouco da sintaxe para queries e algumas visualizações com Plotly.
 
 Como o notebook contém gráficos interativos, [visualize a versão renderizada aqui.](https://nbviewer.jupyter.org/github/tkleyton/portfolio_data-science/blob/master/example_notebooks/spark_mongo.ipynb)
